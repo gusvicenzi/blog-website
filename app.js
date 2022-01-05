@@ -18,8 +18,19 @@ app.set("view engine", "ejs");
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
+// home page
 app.get("/", function (req, res) {
   res.render("home", { startingContent: homeStartingContent });
+});
+
+// about page
+app.get("/about", function (req, res) {
+  res.render("about", { aboutContent: aboutContent });
+});
+
+// contact page
+app.get("/contact", function (req, res) {
+  res.render("contact", { contactContent: contactContent });
 });
 
 app.listen(3000, function () {
