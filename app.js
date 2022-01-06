@@ -61,7 +61,7 @@ app.get("/posts/:postName", function (req, res) {
     if (post.title === req.params.postName) {
       console.log("Match found!");
     } else {
-      console.log("No post found :(");
+      console.log("Post not found :(");
     }
   });
 });
