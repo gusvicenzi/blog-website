@@ -30,6 +30,16 @@
 
 .footer p {
   margin-top: 25px;
-  font-size: 1.5rem;
-  color: #ffed00;
+}
+
+.btn-primary {
+  color: #000;
+  background-color: #ffed00;
+  border-color: #ffed00;
+}
+
+.btn-primary:hover {
+  color: #000;
+  background-color: #ddce00;
+  border-color: #ddce00;
 }
