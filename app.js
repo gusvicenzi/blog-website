@@ -55,6 +55,11 @@ function Post(title, content) {
   this.content = content;
 }
 
+// posts pages
+app.get("/posts/:postName", function (req, res) {
+  console.log(req.params.postName);
+});
+
 app.listen(3000, function () {
   console.log("Server started on port 3000");
 });
