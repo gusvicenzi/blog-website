@@ -61,11 +61,13 @@ function Post(title, content) {
 // posts pages
 app.get("/posts/:postName", function (req, res) {
   const lowerTopic = lowerCase(req.params.postName);
-  console.log(lowerTopic);
   posts.forEach(function (post) {
     const lowerTitle = lowerCase(post.title);
     if (lowerTitle === lowerTopic) {
-      console.log("Match found!");
+      res.render("post", {
+        title: post.title,
+        content: post.content,
+      });
     } else {
       console.log("Post not found :(");
     }
