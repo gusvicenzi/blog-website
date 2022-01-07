@@ -3,11 +3,23 @@ a {
   text-decoration: none;
 }
 
+a:hover {
+  color: #eb7413;
+  text-decoration: none;
+}
+
 html {
   position: relative;
   min-height: 100%;
 }
 
+.btc-title {
+  color: #fd7e14;
+}
+
+.btc-logo {
+  margin: 10px;
+}
 .container-fluid {
   padding-top: 70px;
   padding-bottom: 70px;
