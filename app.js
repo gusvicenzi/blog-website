@@ -5,6 +5,7 @@ const express = require("express");
 // const bodyParser = require("body-parser");
 const ejs = require("ejs");
 const lowerCase = require("lodash/lowerCase");
+const kebabCase = require("lodash/kebabCase");
 // const _ = require("lodash");
 
 const homeStartingContent =
@@ -48,13 +49,18 @@ app.get("/compose", function (req, res) {
 
 app.post("/compose", function (req, res) {
   // console.log(req.body.postTitle);
-  const post = new Post(req.body.postTitle, req.body.postBody);
+  const post = new Post(
+    req.body.postTitle,
+    kebabCase(req.body.postTitle),
+    req.body.postBody
+  );
   posts.push(post);
   res.redirect("/");
 });
 
-function Post(title, content) {
+function Post(title, slug, content) {
   this.title = title;
+  this.slug = slug;
   this.content = content;
 }
 
