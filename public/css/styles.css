@@ -12,7 +12,7 @@
   letter-spacing: 5px;
 }
 .navbar-nav li a:hover {
-  color: #ffed00 !important;
+  color: #fd7e14 !important;
 }
 
 .footer-padding {
@@ -34,12 +34,12 @@
 
 .btn-primary {
   color: #000;
-  background-color: #ffed00;
-  border-color: #ffed00;
+  background-color: #fd7e14;
+  border-color: #fd7e14;
 }
 
 .btn-primary:hover {
   color: #000;
-  background-color: #ddce00;
-  border-color: #ddce00;
+  background-color: #eb7413;
+  border-color: #eb7413;
 }
